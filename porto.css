@@ -1,0 +1,159 @@
+nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.btn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    transition: filter 0.3s;
+}
+
+.btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.data_diri {
+    flex: 2;
+    text-align: center;
+    margin-right: 70px;
+    padding: 20px;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: #282828;
+    min-height: 240px;
+}
+
+.data_diri:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bahasa-pemograman {
+    text-align: center;
+    padding: 20px;
+    justify-content: justify;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+.bahasa-pemograman:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+}
+
+.project {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+.project:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.data_diri h3{
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+li {
+    background-color: #383838;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.data_diri,
+.bahasa-pemograman,
+.project {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bahasa-pemograman {
+    animation-delay: 1s;
+}
+
+.project {
+    animation-delay: 2s;
+}
